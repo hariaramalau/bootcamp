@@ -32,6 +32,7 @@ module.exports = function () {
     router.post("/", (req, res) => {
 
         let newObj = new Customer({
+            customer_id: String,
             name: req.body.name,
             phone: req.body.phone,
             address: req.body.address
@@ -65,6 +66,7 @@ module.exports = function () {
     router.put("/", (req, res) => {
 
         let newObj = new Customer({
+            customer_id: req.body.customer_id,
             name: req.body.name,
             phone: req.body.phone,
             address: req.body.address

@@ -33,7 +33,8 @@ module.exports = function () {
 
             let newObj = new Rumah({
                 rumah_id: req.body.rumah_id,
-                rumah_owner: req.body.rumah_owner
+                rumah_owner: req.body.rumah_owner,
+                rumah_harga : req.body.rumah_harga
             });
 
             newObj.save((error) => {
@@ -65,7 +66,8 @@ module.exports = function () {
 
         let newObj = new Rumah({
             rumah_id: req.body.rumah_id,
-            rumah_owner: req.body.rumah_owner
+            rumah_owner: req.body.rumah_owner,
+            rumah_harga : req.body.rumah_harga
         });
 
         Rumah.findByIdAndUpdate(req.body._id, newObj, (error, result) => {

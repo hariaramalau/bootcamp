@@ -8,7 +8,8 @@ const Schema = mongoose.Schema;
 const rumahSchema = new Schema({
 
     rumah_id: String,
-    rumah_owner: String
+    rumah_owner: String,
+    rumah_harga : Number
 
 })
 
